@@ -1,0 +1,30 @@
+﻿@model BigSchool.Models.CourseViewMode
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2>Create</h2>
+<from>
+
+    <div class="=from-group">
+        @Html.LabelFor(m => m.Place)
+        @Html.TextBoxFor(m => m.Place, new { @class = "from-control" })
+    </div>
+    <div class="=from-group">
+        @Html.LabelFor(m => m.DataTime)
+        @Html.TextBoxFor(m => m.Data, new { @class = "from-control" })
+
+    </div>
+    <div class="=from-group">
+        @Html.LabelFor(m => m.Time)
+        @Html.TextBoxFor(m => m.Time, new { @class = "from-contro" })
+    </div>
+    <div class="=from-group">
+        @Html.LabelFor(m => m.Category)
+        @Html.LabelFor(m => m.Category, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "from-control" })
+    </div>
+    <div class="=from-group"></div>
+    <div class="=from-group"></div>
+    <div class="=from-group"> </div>
+</from>
