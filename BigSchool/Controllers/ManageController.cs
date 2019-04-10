@@ -311,7 +311,7 @@ namespace BigSchool.Controllers
         }
 
         //
-        // GET: /Manage/LinkLoginCallback
+        // GET: /Manage/LinkLoginCallback bbbb
         public async Task<ActionResult> LinkLoginCallback()
         {
             var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
