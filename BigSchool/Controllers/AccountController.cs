@@ -11,7 +11,7 @@ using Microsoft.Owin.Security;
 using BigSchool.Models;
 using BigSchool;
 
-namespace MyBigSchool.Controllers
+namespace BigSchool.Controllers
 {
     [Authorize]
     public class AccountController : Controller

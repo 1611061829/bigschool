@@ -8,7 +8,7 @@ using BigSchool.ViewModels;
 using System.Data.Entity;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
-namespace MyBigSchool.Content
+namespace BigSchool.Content
 {
     public class CoursesController : Controller
     {
