@@ -222,7 +222,7 @@ namespace BigSchool.Controllers
         }
 
         //
-        // POST: /Manage/ChangePassword
+        // POST: /Manage/ChangePassword aaaa
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
