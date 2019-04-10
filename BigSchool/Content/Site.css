@@ -22,3 +22,49 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.course {
+    list-style: none;
+}
+
+    .course > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .course > li .date {
+            text-align: center;
+            background-color: #f34c9e;
+            color: white;
+            width: 60px;
+            border-radius: 8px;
+        }
+
+        .course > li.details {
+            position: absolute;
+            top: 0;
+            right: 70px;
+        }
+
+        .course > li .action {
+            display: none;
+            margin-right: initial;
+            position: absolute;
+        }
+
+        .course > li:hover .action {
+            display: block;
+        }
+
+.navbar-inverse {
+    background-color: #f34c9e;
+    border-color: #fbf6f6;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: white;
+    }

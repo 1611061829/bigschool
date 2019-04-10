@@ -1,30 +1,39 @@
-﻿@model BigSchool.Models.CourseViewMode
+﻿@model BigSchool.ViewModels.CourseViewModel
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/_ViewStart.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <h2>Create</h2>
-<from>
-
-    <div class="=from-group">
+@using (Html.BeginForm("Create", "Courses"))
+{
+    @Html.AntiForgeryToken()
+    @*@Html.Hidden(m=>m.Id)*@
+    <div class="form-group">
         @Html.LabelFor(m => m.Place)
-        @Html.TextBoxFor(m => m.Place, new { @class = "from-control" })
+        @Html.TextBoxFor(m => m.Place, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Place)
     </div>
-    <div class="=from-group">
-        @Html.LabelFor(m => m.DataTime)
-        @Html.TextBoxFor(m => m.Data, new { @class = "from-control" })
-
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Date)
     </div>
-    <div class="=from-group">
+    <div class="form-group">
         @Html.LabelFor(m => m.Time)
-        @Html.TextBoxFor(m => m.Time, new { @class = "from-contro" })
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Time)
     </div>
-    <div class="=from-group">
+    <div class="form-group">
         @Html.LabelFor(m => m.Category)
-        @Html.LabelFor(m => m.Category, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "from-control" })
+        @Html.DropDownListFor(m => m.Category, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Category)
     </div>
-    <div class="=from-group"></div>
-    <div class="=from-group"></div>
-    <div class="=from-group"> </div>
-</from>
+    <button type="submit" value="Save" class="btn btn-primary">Save</button>
+
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval");
+}

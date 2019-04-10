@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BigSchool.Models;
+using MyBigSchool.Controllers;
 
 namespace BigSchool.Controllers
 {
