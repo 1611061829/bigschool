@@ -16,13 +16,13 @@ namespace BigSchool.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
-        public ICollection<FollowingDto> Followers { get; set; }
-        public ICollection<FollowingDto> Followees { get; set; }
-        public ApplicationUser()
-        {
-            Followers = new Collection<FollowingDto>();
-            Followees = new Collection<FollowingDto>();
-        }
+        //public ICollection<FollowingDto> Followers { get; set; }
+        //public ICollection<FollowingDto> Followees { get; set; }
+        //public ApplicationUser()
+        //{
+        //    Followers = new Collection<FollowingDto>();
+        //    Followees = new Collection<FollowingDto>();
+        //}
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -37,7 +37,7 @@ namespace BigSchool.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
-        public DbSet<FollowingDto> Followings { get; set; }
+        //public DbSet<FollowingDto> Followings { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -53,15 +53,15 @@ namespace BigSchool.Models
                 .HasRequired(a => a.Course)
                 .WithMany()
                 .WillCascadeOnDelete(false);
-            modelBuilder.Entity<ApplicationUser>()
-                .HasMany(u => u.Followers)
-                .WithRequired(f => f.Followee)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<ApplicationUser>()
+            //    .HasMany(u => u.Followers)
+            //    .WithRequired(f => f.Followee)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ApplicationUser>()
-                .HasMany(u => u.Followees)
-                .WithRequired(f => f.Follower)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<ApplicationUser>()
+            //    .HasMany(u => u.Followees)
+            //    .WithRequired(f => f.Follower)
+            //    .WillCascadeOnDelete(false);
             base.OnModelCreating(modelBuilder);
         }
     }

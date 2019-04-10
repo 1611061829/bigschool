@@ -209,8 +209,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
-    <Compile Include="Controllers\Following.cs" />
-    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DTOs\AttendanceDto.cs" />
@@ -218,29 +216,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904020120128_KhoiTaoModel.cs" />
-    <Compile Include="Migrations\201904020120128_KhoiTaoModel.Designer.cs">
-      <DependentUpon>201904020120128_KhoiTaoModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040151416_CreateTableCourse.cs" />
-    <Compile Include="Migrations\201904040151416_CreateTableCourse.Designer.cs">
-      <DependentUpon>201904040151416_CreateTableCourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040159063_PopulateCategoryTable.cs" />
-    <Compile Include="Migrations\201904040159063_PopulateCategoryTable.Designer.cs">
-      <DependentUpon>201904040159063_PopulateCategoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904100246184_AddNameColumnToApplicationUser.cs" />
-    <Compile Include="Migrations\201904100246184_AddNameColumnToApplicationUser.Designer.cs">
-      <DependentUpon>201904100246184_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904100513070_AddAttendance.cs" />
-    <Compile Include="Migrations\201904100513070_AddAttendance.Designer.cs">
-      <DependentUpon>201904100513070_AddAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904100542370_AddFollowingsTable.cs" />
-    <Compile Include="Migrations\201904100542370_AddFollowingsTable.Designer.cs">
-      <DependentUpon>201904100542370_AddFollowingsTable.cs</DependentUpon>
+    <Compile Include="Migrations\201904101355170_InitialModel.cs" />
+    <Compile Include="Migrations\201904101355170_InitialModel.Designer.cs">
+      <DependentUpon>201904101355170_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,7 +226,6 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\CourseViewMode.cs" />
-    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -329,23 +306,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904020120128_KhoiTaoModel.resx">
-      <DependentUpon>201904020120128_KhoiTaoModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040151416_CreateTableCourse.resx">
-      <DependentUpon>201904040151416_CreateTableCourse.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040159063_PopulateCategoryTable.resx">
-      <DependentUpon>201904040159063_PopulateCategoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904100246184_AddNameColumnToApplicationUser.resx">
-      <DependentUpon>201904100246184_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904100513070_AddAttendance.resx">
-      <DependentUpon>201904100513070_AddAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904100542370_AddFollowingsTable.resx">
-      <DependentUpon>201904100542370_AddFollowingsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904101355170_InitialModel.resx">
+      <DependentUpon>201904101355170_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
