@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using BigSchool.ViewModels;
-using BigSchool.Models;
+//using BigSchool.Models;
 
 namespace BigSchool.Controllers
 {
